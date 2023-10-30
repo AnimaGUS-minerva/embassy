@@ -3,6 +3,11 @@
 #![allow(clippy::new_without_default)]
 #![doc = include_str!("../README.md")]
 #![warn(missing_docs)]
+#![cfg_attr(target_arch = "xtensa", feature(future_poll_fn))]//@@
+#![cfg_attr(target_arch = "xtensa", feature(option_result_unwrap_unchecked))]//@@
+#![cfg_attr(target_arch = "xtensa", feature(explicit_generic_args_with_impl_trait))]//@@
+#![cfg_attr(target_arch = "xtensa", feature(const_fn_trait_bound))]//@@
+#![cfg_attr(target_arch = "xtensa", feature(const_fn_fn_ptr_basics))]//@@
 
 // This mod MUST go first, so that the others see its macros.
 pub(crate) mod fmt;

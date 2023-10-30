@@ -43,7 +43,8 @@ pub(crate) const STATE_RUN_QUEUED: u32 = 1 << 1;
 pub(crate) const STATE_TIMER_QUEUED: u32 = 1 << 2;
 
 /// Raw task header for use in task pointers.
-pub(crate) struct TaskHeader {
+//pub(crate) struct TaskHeader {
+pub struct TaskHeader {//@@
     pub(crate) state: AtomicU32,
     pub(crate) run_queue_item: RunQueueItem,
     pub(crate) executor: SyncUnsafeCell<Option<&'static SyncExecutor>>,

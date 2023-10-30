@@ -32,10 +32,10 @@ features = ["nightly", "defmt", "arch-cortex-m", "executor-thread", "executor-in
 # Architecture
 _arch = [] # some arch was picked
 arch-std = ["_arch", "critical-section/std"]
-arch-cortex-m = ["_arch", "dep:cortex-m"]
+#@@#arch-cortex-m = ["_arch", "dep:cortex-m"]
 arch-xtensa = ["_arch"]
 arch-riscv32 = ["_arch"]
-arch-wasm = ["_arch", "dep:wasm-bindgen", "dep:js-sys"]
+#@@#arch-wasm = ["_arch", "dep:wasm-bindgen", "dep:js-sys"]
 
 # Enable the thread-mode executor (using WFE/SEV in Cortex-M, WFI in other embedded archs)
 executor-thread = []
@@ -47,7 +47,7 @@ nightly = []
 
 turbowakers = []
 
-integrated-timers = ["dep:embassy-time"]
+#@@#integrated-timers = ["dep:embassy-time"]
 
 # Trace interrupt invocations with rtos-trace.
 rtos-trace-interrupt = ["rtos-trace", "embassy-macros/rtos-trace-interrupt"]
